@@ -21,7 +21,7 @@ def fast_power_simple(a, k):
         return 1
 
     base = fast_power_simple(a, k//2)
-    
+
     elif k % 2 == 0:
         return base*base
     else:
