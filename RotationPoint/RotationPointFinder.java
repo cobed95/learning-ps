@@ -22,6 +22,14 @@ public class RotationPointFinder {
         return 0; 
     }
 
+    private static StringComparable[] getComparableArray(String[] words) {
+        StringComparable[] comparableArray = new StringComparable[words.length];
+        for (int i = 0; i < words.length; i++) {
+            comparableArray[i] = new StringComparable(words[i]);
+        }
+        return comparableArray;
+    }
+
     public static void main(String[] args) {
         String[] words = new String[]{
             "ptolemaic",
@@ -36,5 +44,6 @@ public class RotationPointFinder {
             "karpatka",
             "othellolagkage"
         };
+        StringComparable[] comparableArray = getComparableArray(words);
     }
 }
