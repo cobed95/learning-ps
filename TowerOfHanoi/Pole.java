@@ -26,6 +26,10 @@ public class Pole {
         return this.atHere.isEmpty();
     }
 
+    public int getLength() {
+        return this.atHere.getLength();
+    }
+
     public String toString() {
         return this.atHere.toString();
     }

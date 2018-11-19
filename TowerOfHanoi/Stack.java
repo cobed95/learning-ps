@@ -65,8 +65,21 @@ public class Stack {
         return this.stack[this.tail - 1];
     }
 
+    public int getLength() {
+        return this.tail;
+    }
+
     public String toString() {
-        return Arrays.toString(this.stack);
+        String result = "[";
+        if (this.isEmpty()) return result + "]";
+        else {
+            result += this.stack[0];
+            for (int i = 1; i < this.tail; i++) {
+                result += ", ";
+                result += this.stack[i];
+            }
+            return result + "]";
+        }
     }
 }
 
